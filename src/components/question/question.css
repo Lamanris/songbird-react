@@ -1,0 +1,26 @@
+.question {
+  color: #fff;
+  background-color: #4682b4;
+  border: 1px solid #00bfff;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 20px;
+  display: flex;
+}
+.question__bird-image {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+}
+.question__content {
+  padding-left: 40px;
+  width: 100%;
+}
+.question__bird-name {
+  cursor: default;
+}
+.question__audio-player {
+  width: 100%;
+}
+
+/*# sourceMappingURL=question.css.map */

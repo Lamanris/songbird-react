@@ -1,0 +1,32 @@
+.app__gameover, .app__win {
+  border: 1px solid #00bfff;
+  border-radius: 4px;
+}
+.app__win {
+  object-fit: cover;
+}
+
+.app__gameover {
+  color: #fff;
+  background-color: #4682b4;
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+.app__button {
+  color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.app__button-gameover {
+  background-color: #008b00;
+  border: 1px solid #32cd32;
+}

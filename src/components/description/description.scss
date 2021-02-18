@@ -1,0 +1,51 @@
+.description {
+  color: #fff;
+  background-color: #4682b4;
+  border: 1px solid #00bfff;
+  border-radius: 4px;
+  width: 49%;
+  height: 272px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  &__start-text {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__content {
+    display: flex;
+  }
+  &__bird-image {
+    width: 200px;
+    height: 155px;
+    border-radius: 10px;
+  }
+  &__header {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+
+
+
+
+
+
+.description__bird-species {
+  line-height: 14px;
+}
+
+.description__audio-player {
+  width: 100%;
+}
+
+
+
+.description__bird-info {
+  font-size: 13px;
+}
+
+

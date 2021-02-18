@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  color: #fff;
+}
+.header__top-part {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.header__score {
+  margin: 0;
+  align-self: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.header__level-list {
+  display: flex;
+  list-style: none;
+}
+.header__level-item {
+  width: 17%;
+  padding: 5px 0;
+  background-color: #9b9b9b;
+  text-align: center;
+  line-height: 1.5;
+}
+.header__level-item:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.header__level-item:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*# sourceMappingURL=header.css.map */
