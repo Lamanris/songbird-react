@@ -39,3 +39,32 @@
     border-bottom-right-radius: 5px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__level-list {
+      flex-wrap: wrap;
+      font-size: 15px;
+    }
+
+    &__level-item {
+      width: 33.3%;
+    }
+
+    &__level-item:first-of-type {
+      border-bottom-left-radius: 0;
+    }
+
+    &__level-item:nth-child(3) {
+      border-top-right-radius: 5px;
+    }
+
+    &__level-item:nth-child(4) {
+      border-bottom-left-radius: 5px;
+    }
+
+    &__level-item:last-of-type {
+      border-top-right-radius: 0;
+    }
+  }
+}

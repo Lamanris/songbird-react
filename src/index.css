@@ -92,3 +92,12 @@ img {
   background-color: #008b00;
   border: 1px solid #32cd32;
 }
+
+@media screen and (max-width: 768px) {
+  .app__answers-and-info {
+    flex-direction: column;
+  }
+  .app__win {
+   width: 80%;
+ }
+}

@@ -45,4 +45,10 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .answers {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=answers.css.map */

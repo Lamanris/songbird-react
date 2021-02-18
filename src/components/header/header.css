@@ -40,4 +40,26 @@
   border-bottom-right-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  .header__level-list {
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+  .header__level-item {
+    width: 33.3%;
+  }
+  .header__level-item:first-of-type {
+    border-bottom-left-radius: 0;
+  }
+  .header__level-item:nth-child(3) {
+    border-top-right-radius: 5px;
+  }
+  .header__level-item:nth-child(4) {
+    border-bottom-left-radius: 5px;
+  }
+  .header__level-item:last-of-type {
+    border-top-right-radius: 0;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */

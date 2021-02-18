@@ -23,4 +23,19 @@
   width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+  .question {
+    flex-direction: column;
+  }
+  .question__bird-image {
+    margin: 0 auto;
+  }
+  .question__content {
+    padding: 0;
+  }
+  .question__bird-name {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=question.css.map */
