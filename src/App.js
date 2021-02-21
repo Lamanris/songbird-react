@@ -1,48 +1,43 @@
 import React, {useState,useEffect} from 'react'
 import {Context} from './context'
+import birdsData from "./birds";
 import Header from "./components/header/Header";
 import Question from "./components/question/Question";
 import Answers from "./components/answers/Answers";
 import Description from "./components/description/Description";
 import GameOver from "./components/gameover/GameOver";
-import birdsData from "./birds";
 
 function App() {
     const [step, setStep] = useState(1)
     useEffect(() => {
         let randomQuestion = Math.floor(Math.random() * 6) + 1;
-        question.map((el) => {
-            return el.id === randomQuestion && setActiveQuestion(el)
+        exercise.map((el) => {
+            return el.id === randomQuestion && setActiveAnswer(el)
         })
-
     }, [step])
-    const [activeQuestion, setActiveQuestion] = useState({})
-    const [isTrue, setIsTrue] = useState({
-        status: false,
-    })
-    const [isSelected, setIsSelected] = useState({})
+
+    const exercise = birdsData[step - 1]
     const [result, setResult] = useState(false)
     const [wrongAnswer, setWrongAnswers] = useState([])
     const [totalPoints, setTotalPoints] = useState([0])
+    const [activeAnswer, setActiveAnswer] = useState({})
+    const [isAnswerTrue, setIsAnswerTrue] = useState(false)
+    const [isSelected, setIsSelected] = useState({})
 
-    const question = birdsData[step - 1]
+
     function nextQuestion() {
         if (step >= (birdsData.length)) {
             setResult(true)
         } else {
             setStep(step + 1)
-            setIsTrue({
-                status: false,
-            })
+            setIsAnswerTrue(false)
             setIsSelected(false)
             setWrongAnswers([])
         }
     }
     function resetGame() {
         setStep(1)
-        setIsTrue({
-            status: false,
-        })
+        setIsAnswerTrue(false)
         setIsSelected(false)
         setTotalPoints([0])
         setWrongAnswers([])
@@ -54,8 +49,7 @@ function App() {
 
     return (
         <Context.Provider value={{
-            step, setStep, activeQuestion, setActiveQuestion, isTrue, setIsTrue, isSelected, setIsSelected, result, setResult, wrongAnswer, setWrongAnswers, totalPoints, setTotalPoints, question, nextQuestion, resetGame, countPoints
-        }}>
+            step, exercise, setStep, activeAnswer, setActiveAnswer, isAnswerTrue, setIsAnswerTrue, isSelected, setIsSelected, result, setResult, wrongAnswer, setWrongAnswers, totalPoints, setTotalPoints, nextQuestion, resetGame, countPoints}}>
             <div className="app">
                 <Header />
                 {
@@ -66,10 +60,10 @@ function App() {
                                 <Answers />
                                 <Description />
                             </div>
-                            <button className={`App__button ${isTrue.status ? 'App__button--on' : 'App__button--off'}`} disabled={!isTrue.status}
+                            <button className={`App__button ${isAnswerTrue ? 'App__button--on' : 'App__button--off'}`} disabled={!isAnswerTrue}
                                     onClick={() => nextQuestion()}
                             >{
-                                isTrue.status && step === birdsData.length ? 'Перейти к результату' : 'Следующий вопрос'
+                                isAnswerTrue && step === birdsData.length ? 'Перейти к результату' : 'Следующий вопрос'
                             }</button>
                         </>
                     ) : (
@@ -78,10 +72,9 @@ function App() {
                         </div>
                     )
                 }
-
             </div>
         </Context.Provider>
     )
 }
 
-export default App;
+export default App
