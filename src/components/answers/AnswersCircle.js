@@ -8,9 +8,9 @@ const AnswersCircle = ({index}) => {
         colorChanger()
     })
     function colorChanger() {
-        if (isAnswerTrue && isSelected.isClicked && activeAnswer.id === index) {
+        if (isAnswerTrue && activeAnswer.id === index) {
             setColor('#32cd32')
-        } else if (!isAnswerTrue && isSelected.isClicked && isSelected.id === index) {
+        } else if (!isAnswerTrue && isSelected.id === index) {
             setColor('red')
         } else if (!isSelected.isClicked) {
             setColor('#9b9b9b')
